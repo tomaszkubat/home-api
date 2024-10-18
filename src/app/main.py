@@ -14,7 +14,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.include_router(tasks)
+app.include_router(tasks.router)
 
 @app.get("/", description="Root endpoint")
 def root():

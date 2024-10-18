@@ -3,12 +3,13 @@ from fastapi.responses import JSONResponse
 
 import random
 
-router = APIRouter
+router = APIRouter()
 
 children = ["Tymek", "Józio", "Tosia", "Marysia"]
 adults = ["Ania", "Tomek"]
 
-router.get("/tasks/volunteer/", status_code=status.HTTP_200_OK, tags=["tasks"])
+
+@router.get(path="/tasks/volunteer/", status_code=status.HTTP_200_OK, tags=["tasks"])
 def get_volunteer(add_adults: bool | None = True):
     if add_adults:
         candidates = children + adults
