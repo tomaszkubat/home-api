@@ -10,7 +10,7 @@ adults = ["Ania", "Tomek"]
 
 
 @router.get(path="/tasks/volunteer/", status_code=status.HTTP_200_OK, tags=["tasks"])
-def get_volunteer(add_adults: bool | None = True):
+def get_volunteer(add_adults: bool | None = False):
     if add_adults:
         candidates = children + adults
     else:
