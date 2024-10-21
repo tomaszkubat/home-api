@@ -1,7 +1,7 @@
 from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 
-from routers import tasks
+from routers import users
 
 docs_url = "/api/docs"
 redoc_url = "/api/redoc"
@@ -14,7 +14,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.include_router(tasks.router)
+app.include_router(users.router)
 
 @app.get("/", description="Root endpoint")
 def root():
