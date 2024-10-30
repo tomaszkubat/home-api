@@ -15,6 +15,6 @@ def get_tasks(is_active: bool | None = True):
     #TODO implement
     return JSONResponse(status_code=status.HTTP_200_OK, content=message)
 @router.put(path="/tasks/", status_code=status.HTTP_201_CREATED, tags=["tasks"])
-def create_task():
+def add_task():
     #TODO implement
     return JSONResponse(status_code=status.HTTP_201_CREATED, content=message)
