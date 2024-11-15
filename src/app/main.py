@@ -14,3 +14,6 @@ def get_tasks_data():
 
 
 st.write("### Test tasks data", get_tasks_data())
+
+# db = DB("db/data.db")
+# db.connect()
